@@ -185,7 +185,7 @@ $(document).on("click", ".item-slot", function(e) {
                 if (!$("#weapon-attachments").length) {
                     // if (ItemData.info.attachments !== null && ItemData.info.attachments !== undefined && ItemData.info.attachments.length > 0) {
                     $(".inv-options-list").append(
-                        '<div class="inv-option-item" id="weapon-attachments"><p>Attachments</p></div>'
+                        '<div class="inv-option-item" id="weapon-attachments"><p><i style="margin-top: 1rem" class="fas fa-gun"></i></p></div>'
                     );
                     $("#weapon-attachments").hide().fadeIn(250);
                     ClickedItemData = ItemData;
@@ -2439,6 +2439,7 @@ var requiredItemOpen = false;
     
         if (data.other != null && data.other != "") {
             $(".other-inventory").attr("data-inventory", data.other.name);
+            console.log("otherplayer")
         } else {
             $(".other-inventory").attr("data-inventory", 0);
         }
@@ -2659,6 +2660,7 @@ var requiredItemOpen = false;
                 name != null &&
                 (name.split("-")[0] == "itemshop" || name == "crafting")
             ) {
+                $("#other-inv-label").html(data.other.label);
                 $("#other-inv-label").html(data.other.label);
             } else {
                 $("#other-inv-label").html(data.other.label);
@@ -3036,7 +3038,7 @@ var requiredItemOpen = false;
                     break;
                 case "RobMoney":
                     $(".inv-options-list").append(
-                        '<div class="inv-option-item" id="rob-money"><p>TAKE MONEY</p></div>'
+                        '<div class="inv-option-item" id="rob-money"><p><i style="margin-top: 1rem" class="fas fa-hand-holding-dollar"></i></p></div>'
                     );
                     $("#rob-money").data("TargetId", event.data.TargetId);
                     break;
