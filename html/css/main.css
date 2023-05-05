@@ -750,9 +750,9 @@ body {
 }
 
 .itemboxes-container {
-    height: 8rem;
-    min-width: 40rem;
-    max-width: 40rem;
+    height: 7.5rem;
+    min-width: 90rem;
+    max-width: 90rem;
     width: fit-content;
     position: absolute;
     left: 47%;
@@ -830,16 +830,14 @@ body {
 }
 
 .requiredItem-box {
+    position: relative;
     top: 70%;
     left: 42%;
-    position: relative;
-    width: 6.15rem;
-    height: 6.15rem;
-    margin: 3px;
-    transition: opacity 0.2s ease 0s;
-    border-radius: 9px;
-    opacity: 90%;
-    background-color: #5c5c6c1a;
+    width: 10vh;
+    height: 11vh;
+    float: left;
+    margin-left: 20px;
+    background: rgba(54, 54, 54, 0.233);
 }
 
 #requiredItem-action {
