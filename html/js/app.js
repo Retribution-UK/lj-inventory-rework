@@ -2439,7 +2439,6 @@ var requiredItemOpen = false;
     
         if (data.other != null && data.other != "") {
             $(".other-inventory").attr("data-inventory", data.other.name);
-            console.log("otherplayer")
         } else {
             $(".other-inventory").attr("data-inventory", 0);
         }
