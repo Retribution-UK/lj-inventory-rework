@@ -301,10 +301,36 @@ body {
     margin: 0px auto;
 }
 
+.player-inventory .item-slot {
+    position: relative;
+    width: 14.2%;
+    height: 14.2%;
+    float: left;
+    border: 2px solid #41414b;
+    background-color: #33343d !important;
+    margin: 3px;
+    transition: opacity 0.2s ease 0s;
+    border-radius: 9px;
+    opacity: 60%;
+}
+
+.player-inventory-first .item-slot {
+    position: relative;
+    width: 92%;
+    height: 18.7%;
+    float: left;
+    border: 2px solid #41414b;
+    background-color: #33343d !important;
+    margin: 3px;
+    transition: opacity 0.2s ease 0s;
+    border-radius: 9px;
+    opacity: 60%;
+}
+
 .item-slot {
     position: relative;
-    width: 6.15rem;
-    height: 6.15rem;
+    width: 98px;
+    height: 98px;
     float: left;
     border: 2px solid #41414b;
     background-color: #33343d !important;
