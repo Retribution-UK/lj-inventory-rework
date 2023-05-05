@@ -1127,6 +1127,7 @@ body {
     margin-right: 1vh;
     float: left;
     transition: .05s linear;
+    z-index: 9888;
 }
 
 .weapon-attachment:hover {
@@ -1184,6 +1185,7 @@ body {
     color: white;
     font-size: 2vh;
     transition: background-color .05s linear;
+    z-index: 9888;
 }
 
 .weapon-attachments-remove:hover {
@@ -1231,10 +1233,11 @@ body {
     color: white;
     font-family: 'Roboto', sans-serif !important;
     transition: .05s linear;
+    z-index: 9999;
 }
 
 .weapon-attachments-back:hover {
-    background-color: rgb(18, 18, 18);
+    background-color: var(--color-primary);
 }
 
 .color-picker-container {
