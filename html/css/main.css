@@ -77,7 +77,7 @@ input[type=number]::-webkit-outer-spin-button {
 #progressbar {
     width: 112%;
     margin-left: 65.8%;
-    margin-top: 14.8%;
+    margin-top: 1.8%;
     border-radius: 15px;
     background-color: var(--color-secondary);
 }
@@ -85,7 +85,7 @@ input[type=number]::-webkit-outer-spin-button {
 #progressbar-other {
     width: 77.6%;
     margin-left: 2.2%;
-    margin-top: 14.8%;
+    margin-top: 1.8%;
     border-radius: 15px;
     background-color: var(--color-secondary);
 }
@@ -252,7 +252,7 @@ body {
 .inv-options {
     position: absolute;
     margin: 11.5% auto;
-    right: -15.3rem;
+    right: -12.8%;
     height: 4rem;
     width: 4.3rem;
     left: 1vh;
@@ -262,8 +262,8 @@ body {
 
 .inv-help-options {
     background: var(--color-primary);
-    height: 7rem;
-    width: 3.5rem; 
+    height: 2.8rem;
+    width: 2.8rem; 
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -272,14 +272,14 @@ body {
     border-radius: 5px;
     box-shadow: none;
     text-shadow: none;
-    margin-left: 17.8%;
-    margin-top: 35%;
+    margin-left: 18%;
+    margin-top: 40%;
 }
 
 .inv-help-options button {
     background-color: transparent;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
     color: white;
     border: none;
     box-shadow: none;
@@ -303,8 +303,8 @@ body {
 
 .item-slot {
     position: relative;
-    width: 98px;
-    height: 98px;
+    width: 6.15rem;
+    height: 6.15rem;
     float: left;
     border: 2px solid #41414b;
     background-color: #33343d !important;
@@ -571,12 +571,13 @@ body {
 
 .ui-draggable-dragging {
     background: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
 }
 
 .player-inv-info {
     position: absolute;
     left: 3.3%;
-    top: 8.6%;
+    top: 15.6%;
     width: 28.8%;
     z-index: 1000;
     cursor: none;
@@ -589,8 +590,7 @@ body {
     font-family: 'Roboto', sans-serif !important;
     font-weight: 600;
     letter-spacing: 0.01vh;
-    right: -22.8rem;
-    top: 72px;
+    right: -66%;
     float: left;
     text-transform: normal;
     cursor: none;
@@ -615,8 +615,7 @@ body {
     font-family: 'Roboto', sans-serif !important;
     font-weight: 600;
     letter-spacing: 0.01vh;
-    left: 15px;
-    top: 72px;
+    left: 3%;
     float: left;
     text-transform: normal;
     cursor: none;
@@ -651,7 +650,7 @@ body {
 .other-inv-info {
     position: absolute;
     left: 58.3%;
-    top: 8.6%;
+    top: 15.6%;
     width: 28.8%;
     z-index: 1000;
 }
@@ -712,9 +711,9 @@ body {
 }
 
 .itemboxes-container {
-    height: 140px;
-    min-width: 129px;
-    max-width: 80vh;
+    height: 8rem;
+    min-width: 40rem;
+    max-width: 40rem;
     width: fit-content;
     position: absolute;
     left: 47%;
@@ -732,8 +731,8 @@ body {
     float: left;
     margin: 0 auto;
     margin-right: 1vh;
-    width: 98px;
-    height: 98px;
+    width: 6.15rem;
+    height: 7.15rem;
     background: rgba(26, 26, 26, 0.2);
     border-radius: 5px;
 }
@@ -775,7 +774,7 @@ body {
     color: #ffffff;
     font-size: 14px;
     text-align: center;
-    top: -25px;
+    top: -1.6rem;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -796,8 +795,8 @@ body {
     top: 70%;
     left: 42%;
     position: relative;
-    width: 98px;
-    height: 98px;
+    width: 6.15rem;
+    height: 6.15rem;
     margin: 3px;
     transition: opacity 0.2s ease 0s;
     border-radius: 9px;
@@ -878,8 +877,8 @@ body {
     margin-left: 2px;
     margin-bottom: 2px;
     position: relative;
-    width: 98px;
-    height: 98px;
+    width: 6.15rem;
+    height: 6.15rem;
     float: left;
     border: 2px solid #41414b;
     background-color: #33343d !important;
