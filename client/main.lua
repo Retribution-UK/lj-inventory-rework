@@ -437,6 +437,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                     maxweight = Config.MaxInventoryWeight,
                     Ammo = PlayerAmmo,
                     maxammo = Config.MaximumAmmoValues,
+                    Name = PlayerData.charinfo.firstname .." ".. PlayerData.charinfo.lastname .." - [".. GetPlayerServerId(PlayerId()) .."]", 
                 })
                 inInventory = true
                 end, function() -- Play When Cancel
@@ -459,6 +460,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                 maxweight = Config.MaxInventoryWeight,
                 Ammo = PlayerAmmo,
                 maxammo = Config.MaximumAmmoValues,
+                Name = PlayerData.charinfo.firstname .." ".. PlayerData.charinfo.lastname .." - [".. GetPlayerServerId(PlayerId()) .."]", 
             })
             inInventory = true
         end
