@@ -2751,21 +2751,35 @@ var requiredItemOpen = false;
         if (data.error) {
             Inventory.Error();
         }
-        for (i = 1; i < data.slots + 1; i++) {
+        var firstSlots = $(".player-inventory-first");
+        for (i = 1; i < 6; i++) {
+            firstSlots.append(
+                '<div class="item-slot" data-slot="' +
+                i +
+                '"><div class="item-slot-key"><p>' +
+                i +
+                '</p></div><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>'
+            );
+        }
+        $(".player-inventory").append(firstSlots);
+    
+        var remainingSlots = $(".player-inventory");
+        for (i = 6; i < data.slots + 1; i++) {
             if (i == 43) {
-                $(".player-inventory").append(
+                remainingSlots.append(
                     '<div class="item-slot" data-slot="' +
                     i +
                     '"><div class="item-slot-key"><p>6 <i class="fas fa-lock"></i></p></div><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>'
                 );
             } else {
-                $(".player-inventory").append(
+                remainingSlots.append(
                     '<div class="item-slot" data-slot="' +
                     i +
                     '"><div class="item-slot-img"></div><div class="item-slot-label"><p>&nbsp;</p></div></div>'
                 );
             }
         }
+        $(".player-inventory").append(remainingSlots);
 
         $.each(data.inventory, function(i, item) {
             if (item != null) {
