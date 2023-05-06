@@ -717,7 +717,7 @@ body {
     width: fit-content;
     position: absolute;
     left: 47%;
-    bottom: 20%;
+    bottom: 9.8%;
     overflow: hidden;
 }
 
@@ -792,7 +792,7 @@ body {
 
 .requiredItem-box {
     position: relative;
-    top: 70%;
+    top: 79%;
     left: 42%;
     width: 10vh;
     height: 11vh;
