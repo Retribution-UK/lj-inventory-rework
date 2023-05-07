@@ -651,7 +651,7 @@ local function GetOwnedVehicleItems(plate)
 				unique = itemInfo["unique"],
 				useable = itemInfo["useable"],
 				image = itemInfo["image"],
-				created = created,
+				created = item.created,
 				slot = item.slot,
 			}
 		end
