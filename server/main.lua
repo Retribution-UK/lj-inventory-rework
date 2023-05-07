@@ -529,6 +529,7 @@ local function GetStashItems(stashId)
 				unique = itemInfo["unique"],
 				useable = itemInfo["useable"],
 				image = itemInfo["image"],
+				created = item.created,
 				slot = item.slot,
 			}
 		end
@@ -650,6 +651,7 @@ local function GetOwnedVehicleItems(plate)
 				unique = itemInfo["unique"],
 				useable = itemInfo["useable"],
 				image = itemInfo["image"],
+				created = created,
 				slot = item.slot,
 			}
 		end
@@ -773,6 +775,7 @@ local function GetOwnedVehicleGloveboxItems(plate)
 				unique = itemInfo["unique"],
 				useable = itemInfo["useable"],
 				image = itemInfo["image"],
+				created = item.created,
 				slot = item.slot,
 			}
 		end
@@ -2438,6 +2441,9 @@ QBCore.Functions.CreateCallback('inventory:server:ConvertQuality', function(sour
 				if item.created then
 					if QBCore.Shared.Items[item.name:lower()]["decay"] ~= nil or QBCore.Shared.Items[item.name:lower()]["decay"] ~= 0 then
 						if item.info then
+							if type(item.info) == "string" then
+								item.info = {}
+							end
 							if item.info.quality == nil then
 								item.info.quality = 100
 							end
@@ -2446,7 +2452,7 @@ QBCore.Functions.CreateCallback('inventory:server:ConvertQuality', function(sour
 							item.info = info
 						end
 						local quality = ConvertQuality(item)
-                    	if item.info.quality then
+						if item.info.quality then
 							if quality < item.info.quality then
 								item.info.quality = quality
 							end

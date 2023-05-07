@@ -906,13 +906,13 @@ function updateweights($fromSlot, $toSlot, $fromInv, $toInv, $toAmount) {
     }
 
     if (
-        ($fromInv.attr("data-inventory").split("-") == "itemshop" &&
-            $toInv.attr("data-inventory").split("-") == "itemshop") ||
+        ($fromInv.attr("data-inventory").split("-")[0] == "itemshop" &&
+            $toInv.attr("data-inventory").split("-")[0] == "itemshop") ||
         ($fromInv.attr("data-inventory") == "crafting" &&
             $toInv.attr("data-inventory") == "crafting")
     ) {
         itemData = $fromInv.find("[data-slot=" + $fromSlot + "]").data("item");
-        if ($fromInv.attr("data-inventory").split("-") == "itemshop") {
+        if ($fromInv.attr("data-inventory").split("-")[0] == "itemshop") {
             $fromInv
                 .find("[data-slot=" + $fromSlot + "]")
                 .html(
@@ -2703,8 +2703,6 @@ var requiredItemOpen = false;
                 (name.split("-")[0] == "itemshop" || name == "crafting")
             ) {
                 $("#other-inv-label").html(data.other.label);
-                $("#other-inv-label").html(data.other.label);
-
             } else {
                 $("#other-inv-label").html(data.other.label);
                 $("#other-inv-weight").html(
