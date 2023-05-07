@@ -1380,3 +1380,9 @@ body {
     }
 
 }
+
+.craft-item-slot {
+    width: 30%;
+    height: 30%;
+    background: #0fffd5;
+}

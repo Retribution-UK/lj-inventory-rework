@@ -429,6 +429,9 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                 if other then
                     currentOtherInventory = other.name
                 end
+            QBCore.Functions.TriggerCallback('inventory:server:ConvertQuality', function(data)
+                inventory = data.inventory
+                other = data.other
                 SendNUIMessage({
                     action = "open",
                     inventory = inventory,
@@ -440,8 +443,9 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                     Name = PlayerData.charinfo.firstname .." ".. PlayerData.charinfo.lastname .." - [".. GetPlayerServerId(PlayerId()) .."]", 
                 })
                 inInventory = true
-                end, function() -- Play When Cancel
-            end)
+                end, inventory, other)
+
+        end)
         else
             Wait(500)
             ToggleHotbar(false)
@@ -452,6 +456,9 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
             if other then
                 currentOtherInventory = other.name
             end
+        QBCore.Functions.TriggerCallback('inventory:server:ConvertQuality', function(data)
+            inventory = data.inventory
+            other = data.other
             SendNUIMessage({
                 action = "open",
                 inventory = inventory,
@@ -463,6 +470,7 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
                 Name = PlayerData.charinfo.firstname .." ".. PlayerData.charinfo.lastname .." - [".. GetPlayerServerId(PlayerId()) .."]", 
             })
             inInventory = true
+            end,inventory,other)
         end
     end
 end)
