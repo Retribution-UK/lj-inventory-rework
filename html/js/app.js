@@ -503,6 +503,137 @@ function FormatItemInfo(itemData, dom) {
                 itemData.info.birthdate +
                 "</span></p>"
             );
+        	
+        } else if (itemData.name == "hunterlicense") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p><strong>First Name: </strong><span>" +	
+                itemData.info.firstname +	
+                "</span></p><p><strong>Last Name: </strong><span>" +	
+                itemData.info.lastname + 	
+                "</span></p><p><strong>Date Issued: </strong><span>" +	
+                itemData.info.created +	
+                "</span></p><p><strong>Expiration Date: </strong><span>" +	
+                itemData.info.expire + "</a>"	
+            );	
+        } else if (itemData.name == "heart") {	
+        $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+        $(".item-info-description").html(	
+            "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+        );	
+        } else if (itemData.name == "lungs") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "brain") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "intestines") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "kidneys") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "stomach") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "liver") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "humanmeat") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "bounty-contract") {	
+            $(".item-info-title").html('<p>' + itemData.label + '</p>')	
+            $(".item-info-description").html('<p><strong>First Name: </strong><span>'+ 	
+            itemData.info.targetname + 	
+            '</span></p><p><strong>Last Name: </strong><span>' + 	
+            itemData.info.targetlastname + 	
+            '</span></p><p><strong>Last Seen: </strong><span>' + 	
+            itemData.info.lastseen + 	
+            '</span></p><p><strong>Bounty: $</strong><span>' + 	
+            itemData.info.bountyprice + 	
+            '</span></p><p><strong>Wanted For: </strong><span>' + 	
+            itemData.info.wantedfor	
+            );	
+        } else if (itemData.name == "bounty-body") {	
+            $(".item-info-title").html('<p>' + itemData.label + '</p>')	
+            $(".item-info-description").html('<p><strong>First Name: </strong><span>' 	
+            + itemData.info.targetname + 	
+            '</span></p><p><strong>Last Name: </strong><span>' + 	
+            itemData.info.targetlastname	
+            );
+        } else if (itemData.name == "motel_key") {	
+            $(".item-info-title").html(	
+              "<p>" + itemData.label + "</p>"	
+            );	
+            $(".item-info-description").html(	
+              "<p>" +	
+                "Motel: " +	
+                itemData.info.motel_label +	
+                "</p><p>" +	
+                "Room: " +	
+                itemData.info.room_label +	
+                "</p>"	
+            );	
+          } else if (itemData.name == "blueprint_document") { // Blueprint for crafting	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p><span>" + 	
+                itemData.description + "</span></p>" +	
+                "<p><strong>Blueprint :</strong> " + 	
+                itemData.info.blueprint_label + "</p>"	
+            );	
+        } else if (itemData.name == "craftrecipe") {	
+            $(".item-info-title").html("<p>" + itemData.info.item + " Recipe</p>");	
+            $(".item-info-description").html(	
+                "<p><strong>One use only: </strong><span>" +	
+                itemData.info.oneUse +	
+                "</span></p><p><strong>Recipe ID: </strong><span>" +	
+                itemData.info.CraftAdd +	
+                "</span></p>"	
+            );	
+        } else if (itemData.name == "syphoningkit") { // Syphoning Kit (CDN-Fuel or CDN-Syphoning!)	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p>" + "A kit used to syphon gasoline from vehicles! <br><br>" + itemData.info.gasamount + " Liters Inside.</p>" +	
+                "</span></p><p style=\"padding-top: .8vh;font-size:11px\"><b>Weight: </b>" + ((itemData.weight * itemData.amount) / 1000).toFixed(1) + " | <b>Amount: </b> " + itemData.amount	
+            );	
+        } else if (itemData.name == "jerrycan") { // Jerry Can (CDN-Fuel!)	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p>" + "A Jerry Can, designed to hold fuel! <br><br>" + itemData.info.gasamount + " Liters Inside.</p>" +	
+                "</span></p><p style=\"padding-top: .8vh;font-size:11px\"><b>Weight: </b>" + ((itemData.weight * itemData.amount) / 1000).toFixed(1) + " | <b>Amount: </b> " + itemData.amount	
+            );	
+        } else if (itemData.name == "mechboard") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p>" + itemData.info.vehplate + "</p>" +	
+                "<p>" + itemData.info.veh + "</p>"	
+            );	
+        } else if (itemData.name == "fishinglure") {	
+            $(".item-info-title").html('<p>' + itemData.label + '</p>')	
+            $(".item-info-description").html( // might need to come back	
+                "<p>" + itemData.info.uses + "% durability left.</p><p style=\"font-size:11px\"><b>Weight: </b>" + itemData.weight + " | <b>Amount: </b> " + itemData.amount + " | <b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );	
+        } else if (itemData.name == "fishinglure2") {	
+            $(".item-info-title").html('<p>' + itemData.label + '</p>')	
+            $(".item-info-description").html( // might need to come back	
+                "<p>" + itemData.info.uses + "% durability left.</p><p style=\"font-size:11px\"><b>Weight: </b>" + itemData.weight + " | <b>Amount: </b> " + itemData.amount + " | <b>Quality: </b> " + "<a style=\"font-size:11px;color:green\">" + Math.floor(itemData.info.quality) + "</a>"	
+            );
         } else if (itemData.name == "lawyerpass") {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
             $(".item-info-description").html(
@@ -520,6 +651,12 @@ function FormatItemInfo(itemData, dom) {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
             $(".item-info-description").html(
                 "<p>" + itemData.info.uses + " uses left.</p>"
+            );
+        } else if (itemData.name == "mechboard") {	
+            $(".item-info-title").html("<p>" + itemData.label + "</p>");	
+            $(".item-info-description").html(	
+                "<p>" + itemData.info.vehplate + "</p>" +	
+                "<p>" + itemData.info.veh + "</p>"	
             );
         } else if (itemData.type == "weapon") {
             $(".item-info-title").html("<p>" + itemData.label + "</p>");
