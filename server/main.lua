@@ -1903,6 +1903,7 @@ RegisterNetEvent('inventory:server:SetInventoryData', function(fromInventory, to
                     itemData.info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
                     itemData.info.quality = 100
                 end
+				
                 local serial = itemData.info.serie
                 local imageurl = ("https://cfx-nui-lj-inventory/html/images/%s.png"):format(itemData.name)
                 local notes = "Purchased at Ammunation"
@@ -2184,7 +2185,31 @@ QBCore.Commands.Add("giveitem", "Give An Item (Admin Only)", {{name="id", help="
 					info.serie = tostring(QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(1) .. QBCore.Shared.RandomStr(2) .. QBCore.Shared.RandomInt(3) .. QBCore.Shared.RandomStr(4))
 					info.quality = 100
 				elseif itemData["name"] == "harness" then
-					info.uses = 20
+					info.uses = 20	
+				elseif itemData["name"] == "fishinglure" then	
+					info.uses = 1000	
+				elseif itemData["name"] == "fishinglure2" then	
+					info.uses = 1500			
+				elseif itemData["name"] == "syphoningkit" then	
+					info.gasamount = 0	
+				elseif itemData["name"] == "jerrycan" then	
+					info.gasamount = 0	
+				elseif itemData["name"] == "heart" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "lungs" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "brain" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "intestines" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "kidneys" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "stomach" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "liver" then	
+					info.quality = math.random(45, 100)	
+				elseif itemData["name"] == "humanmeat" then	
+					info.quality = math.random(45, 100)
 				elseif itemData["name"] == "markedbills" then
 					info.worth = math.random(5000, 10000)
 				elseif itemData["name"] == "labkey" then
@@ -2257,7 +2282,7 @@ CreateUsableItem("driver_license", function(source, item)
 		local dist = #(playerCoords - GetEntityCoords(targetPed))
 		if dist < 3.0 then
 			TriggerClientEvent('chat:addMessage', v,  {
-					template = '<div class="chat-message advert"><div class="chat-message-body"><strong>{0}:</strong><br><br> <strong>First Name:</strong> {1} <br><strong>Last Name:</strong> {2} <br><strong>Birth Date:</strong> {3} <br><strong>Licenses:</strong> {4}</div></div>',
+					template = '<div class="chat-message advert"><div class="chat-message-body"><strong>{0}:</strong>\n\n <strong>First Name:</strong> {1} \n<strong>Last Name:</strong> {2} \n<strong>Birth Date:</strong> {3} \n<strong>Licenses:</strong> {4}</div></div>',
 					args = {
 						"Drivers License",
 						item.info.firstname,
