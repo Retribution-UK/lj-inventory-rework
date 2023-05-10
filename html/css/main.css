@@ -486,7 +486,7 @@ body {
 .item-slot-name > p {
     color: #ffffff;
     text-align: right;
-    font-size: 1.25vh;
+    font-size: 0.85vh;
     font-weight: 400;
     cursor: none;
 }
@@ -718,7 +718,7 @@ body {
     width: fit-content;
     position: absolute;
     left: 47%;
-    bottom: 18%;
+    bottom: 9.8%;
     overflow: hidden;
 }
 
@@ -734,9 +734,7 @@ body {
     margin-right: 1vh;
     width: 10vh;
     height: 11vh;
-    border: 2px solid #41414b;
-    background-color: #33343d !important;
-    border-radius: 9px;
+    background: rgba(54, 54, 54, 0.233);
 }
 
 #itembox-action {
@@ -902,7 +900,7 @@ body {
 .z-hotbar-item-slot-amount > p {
     color: #ffffff;
     text-align: right;
-    font-size: 1.25vh;
+    font-size: 0.85vh;
     font-weight: 400;
     cursor: none;
 }
