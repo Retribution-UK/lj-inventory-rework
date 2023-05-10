@@ -718,7 +718,7 @@ body {
     width: fit-content;
     position: absolute;
     left: 47%;
-    bottom: 9.8%;
+    bottom: 18%;
     overflow: hidden;
 }
 
@@ -734,7 +734,9 @@ body {
     margin-right: 1vh;
     width: 10vh;
     height: 11vh;
-    background: rgba(54, 54, 54, 0.233);
+    border: 2px solid #41414b;
+    background-color: #33343d !important;
+    border-radius: 9px;
 }
 
 #itembox-action {
